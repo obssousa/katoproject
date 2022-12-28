@@ -1,8 +1,5 @@
 <template>
     <div class="content">
-        <el-row class="logo" justify="center">
-            <img class="image" src="@/assets/kato.png" />
-        </el-row>
         <el-row class="description" justify="center">
             <div class="circle">
                 <div class="column">
@@ -96,19 +93,6 @@ const { isMobile } = useDevice()
 .content {
     padding: 20px 0;
 
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 360px;
-        padding: 20px 0px;
-        color: var(--el-color-white);
-
-        .image {
-            max-width: 300px;
-        }
-    }
-
     .description {
         .circle {
             display: flex;
@@ -121,6 +105,7 @@ const { isMobile } = useDevice()
             background-color: var(--el-color-primary);
             height: 500px;
             width: 500px;
+            margin: 160px 0;
 
             &:hover {
                 background: rgba(243, 119, 119, 0.9);

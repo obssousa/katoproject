@@ -29,7 +29,7 @@ import SenseiCard from '@/components//SenseiCard.vue'
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    padding: 20px 0px;
+    padding: 80px 0px;
     background-image: linear-gradient(to left, var(--el-color-primary), var(--el-color-primary-light-3));
     color: var(--el-color-white);
     flex-wrap: nowrap;
