@@ -11,7 +11,7 @@
                         content="Esforçar-se para a formação do caráter."
                     >
                         <template #reference>
-                            <component class="kanjin" :is="isMobile ? 'h4' : 'h3'">
+                            <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
                                 一、人格完成に努むること
                             </component>
                         </template>
@@ -26,7 +26,7 @@
                         content="Fidelidade para com o verdadeiro caminho da razão."
                     >
                         <template #reference>
-                            <component class="kanjin" :is="isMobile ? 'h4' : 'h3'">
+                            <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
                                 一、誠の道を守ること
                             </component>
                         </template>
@@ -41,7 +41,7 @@
                         content="Desenvolver a persistência e o esforço."
                     >
                         <template #reference>
-                            <component class="kanjin" :is="isMobile ? 'h4' : 'h3'">
+                            <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
                                 一、努力の精神を養うこと
                             </component>
                         </template>
@@ -56,7 +56,7 @@
                         content="Respeito acima de tudo."
                     >
                         <template #reference>
-                            <component class="kanjin" :is="isMobile ? 'h4' : 'h3'">
+                            <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
                                 一、礼儀を重んずること
                             </component>
                         </template>
@@ -71,7 +71,7 @@
                         content="Conter o espírito de agressão destrutiva."
                     >
                         <template #reference>
-                            <component class="kanjin" :is="isMobile ? 'h4' : 'h3'">
+                            <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
                                 一、血気の勇を戒むること
                             </component>
                         </template>
@@ -90,6 +90,7 @@ const { isMobile } = useDevice()
 </script>
 
 <style lang="scss" scoped>
+@import '../../assets/variables.scss';
 .content {
     padding: 20px 0;
 
@@ -101,7 +102,7 @@ const { isMobile } = useDevice()
             flex-wrap: wrap;
             align-content: center;
             border-radius: 50%;
-            gap: 30px;
+            gap: $space4x;
             background-color: var(--el-color-primary);
             height: 500px;
             width: 500px;
@@ -137,18 +138,15 @@ const { isMobile } = useDevice()
 {
     .content {
 
-        .logo {
-            padding: 0px;
-        }
         .description {
             .circle {
                 gap: 11vw;
-                min-width: 320px;
-                height: 100vw;
+                min-width: 310px;
+                height: 95vw;
                 width: 100vw;
                 max-width: 500px;
                 max-height: 500px;
-                margin-top: -50px;
+                margin: 100px $space 60px;
             }
 
             .kanjin {

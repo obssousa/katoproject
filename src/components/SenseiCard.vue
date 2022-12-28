@@ -1,52 +1,80 @@
 <template>
-        <el-card class="cardParent" :style="imageGradientStyle" :body-style="{ padding: '0px' }">
-          <div class="bottom">
-            <h2 class="name">{{ name }}</h2>
-            <h4>{{ graduation }}</h4>
-            <span> {{ about }} </span>
-          </div>
-        </el-card>
+    <div class="cardParent">
+      <img class="image" :src="img" />
+      <div class="bottom">
+        <component class="name" :is="isMobile ? 'h3' : 'h2'">{{ name }}</component>
+        <h4 class="graduation"> {{ graduation }}</h4>
+        <span class="about"> {{ about }} </span>
+      </div>
+    </div>
   </template>
 
 <script setup>
-import { computed } from 'vue'
+import useDevice from '@/hooks/useDevice'
 
-const props = defineProps({
+defineProps({
   name: String,
   img: String,
   graduation: String,
   about: String
 })
 
-const imageGradientStyle = computed(() => {
-  return {
-    backgroundImage: `linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(230,232,235,0.41) 50%, rgba(255,255,255,0) 100%), url('${props.img}')`,
-    backgroundSize: 'cover',
-    color: 'white',
-    height: '-webkit-fill-available',
-    width: '-webkit-fill-available'
-  }
-})
+const { isMobile } = useDevice()
 
 </script>
 
 <style lang="scss" scoped>
 
   .cardParent {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    .image {
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
     .bottom {
-      position: absolute;
-      bottom: 0;
-      margin: 20px;
-      color: var(--el-color-black);
+      margin: 0 20px;
+      color: var(--el-color-white);
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
 
       .name {
-        color: var(--el-color-primary);
+        margin: 0px;
       }
+
+      .graduation {
+        margin: 8px 0 0;
+      }
+
+      .about {
+        margin: 16px 0 0;
+      }
+    }
+  }
+
+  @media (max-width: 550px)  {
+    .cardParent {
+        align-items: center;
+
+        .image {
+          height: 120px;
+          width: 120px;
+        }
+
+        .bottom {
+          margin: 0 4px;
+          .name, .graduation, .about {
+            margin: 2px;
+          }
+        }
     }
   }
 

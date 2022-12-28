@@ -5,10 +5,10 @@ import sensei from '@/assets/sensei.jpg'
 
 const senseis = [
   {
-    name: 'Helena Gabriela',
-    graduation: '1º Dan',
-    img: helena,
-    about: 'Professora assistente'
+    name: 'Geordano Valente Raad',
+    graduation: '4º Dan',
+    img: sensei,
+    about: 'Fundador do Dojo Kato'
   },
   {
     name: 'Gilson do Mau',
@@ -17,10 +17,10 @@ const senseis = [
     about: 'Discipulo do Mestre'
   },
   {
-    name: 'Geordano Valent Raad',
-    graduation: '5º Dan',
-    img: sensei,
-    about: 'Fundador do Dojo Kato'
+    name: 'Helena Gabriela',
+    graduation: '1º Dan',
+    img: helena,
+    about: 'Professora Assistente'
   },
   {
     name: 'Andreia Cristina da Silva',

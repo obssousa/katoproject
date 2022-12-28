@@ -28,7 +28,7 @@ defineProps({
 const currentDate = ref(new Date())
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 .cardParent {
     width: 360px;

@@ -11,11 +11,11 @@
     >
         <img @click="navigateToHash(0)" class="logo" src="@/assets/kato.png" />
         <div class="divider"></div>
-        <el-menu-item index="0">Unidades</el-menu-item>
         <el-menu-item index="1">Ensino</el-menu-item>
-        <el-menu-item index="2">Contato</el-menu-item>
-        <el-menu-item index="3">Federação</el-menu-item>
-        <el-menu-item index="4">Parceiros</el-menu-item>
+        <el-menu-item index="2">Unidades</el-menu-item>
+        <el-menu-item index="3">Contato</el-menu-item>
+        <el-menu-item index="4">Federação</el-menu-item>
+        <el-menu-item index="5">Parceiros</el-menu-item>
     </el-menu>
 </template>
 
