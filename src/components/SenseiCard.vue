@@ -2,8 +2,8 @@
     <div class="cardParent">
       <img class="image" :src="img" />
       <div class="bottom">
-        <component class="name" :is="isMobile ? 'h3' : 'h2'">{{ name }}</component>
-        <h4 class="graduation"> {{ graduation }}</h4>
+        <component class="name" :is="isMobile ? 'h4' : 'h2'">{{ name }}</component>
+        <component class="graduation" :is="isMobile ? 'h5' : 'h4'">{{ graduation }}</component>
         <span class="about"> {{ about }} </span>
       </div>
     </div>
@@ -28,6 +28,8 @@ const { isMobile } = useDevice()
   .cardParent {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     width: 100%;
 
     .image {
@@ -60,7 +62,7 @@ const { isMobile } = useDevice()
     }
   }
 
-  @media (max-width: 550px)  {
+  @media (max-width: 768px)  {
     .cardParent {
         align-items: center;
 
@@ -70,9 +72,9 @@ const { isMobile } = useDevice()
         }
 
         .bottom {
-          margin: 0 4px;
+          margin: 0 8px;
           .name, .graduation, .about {
-            margin: 2px;
+            margin: 4px;
           }
         }
     }
