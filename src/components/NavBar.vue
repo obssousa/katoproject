@@ -33,6 +33,9 @@ const handleSelect = (key, keyPath) => {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
     width: 100%;
 
     .logo {

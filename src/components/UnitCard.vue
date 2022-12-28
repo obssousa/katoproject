@@ -32,10 +32,11 @@ const currentDate = ref(new Date())
 
 .cardParent {
     width: 360px;
+    background-image: linear-gradient(to left, var(--el-color-primary-light-5), var(--el-color-primary-light-7));
+    color: var(--color-black);
 }
   .time {
     font-size: 12px;
-    color: #999;
   }
 
   .bottom {

@@ -1,5 +1,6 @@
 <template>
     <el-row class="row" justify="center">
+        <h1 class="title"> Conheça os senseis do projeto Kato </h1>
         <el-carousel class="card" :interval="4000" type="card" height="200px">
             <el-carousel-item v-for="item in 6" :key="item">
             <h3 text="2xl" justify="center">{{ item }}</h3>
@@ -20,8 +21,13 @@ import { units } from '@/constants/units'
     align-items: center;
     gap: 8px;
     height: 360px;
-    margin: 20px 0px;
-    background: var(--el-color-primary);
+    padding: 20px 0px;
+    background-image: linear-gradient(to left, var(--el-color-primary), var(--el-color-primary-light-3));
+    color: var(--el-color-white);
+
+    .title {
+        // text-shadow: 2px 2px 2px black;
+    }
 
    .card {
     width: 100%;
