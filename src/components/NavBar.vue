@@ -10,7 +10,7 @@
         @select="handleSelect"
     >
         <img class="logo" src="@/assets/kato.png" />
-        <div class="flex-grow"></div>
+        <div class="divider"></div>
         <el-menu-item index="0">Unidades</el-menu-item>
         <el-menu-item index="1">Ensino</el-menu-item>
         <el-menu-item index="2">Contato</el-menu-item>
@@ -30,14 +30,20 @@ const handleSelect = (key, keyPath) => {
 <style lang="scss" scoped>
 
 .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     width: 100%;
 
     .logo {
+        margin: 4px 8px;
         height: 50px;
+    }
+
+    .divider {
+        max-width: 1080px;
+        flex-grow: 1;
     }
 }
 
-.flex-grow {
-    flex-grow: 1;
-}
 </style>

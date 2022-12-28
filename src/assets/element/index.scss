@@ -17,11 +17,16 @@ $colors: (
         'info': (
                 'base': #00b0ff,
         ),
+        'white': #fafafa
 );
 
 @forward "element-plus/theme-chalk/src/common/var.scss" with (
 // do not use same name, it will override.
-$colors: $colors
+$colors: $colors,
 );
 
 @use "element-plus/theme-chalk/src/index.scss" as *;
+
+body {
+        margin: 0;
+};

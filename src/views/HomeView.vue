@@ -1,15 +1,11 @@
 <script setup>
-import KButton from '@/components/KButton.vue'
+import UnitsSection from '@/components/sections/UnitsSection.vue'
+import LearnSection from '@/components/sections/LearnSection.vue'
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <UnitsSection id="units"  />
+    <LearnSection id="units"  />
   </div>
-  <KButton label="Vite + Vue" />
 </template>
