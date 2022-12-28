@@ -7,24 +7,33 @@
         class="header"
         mode="horizontal"
         :ellipsis="false"
-        @select="handleSelect"
+        @select="navigateToHash"
     >
-        <img class="logo" src="@/assets/kato.png" />
+        <img @click="navigateToHash(0)" class="logo" src="@/assets/kato.png" />
         <div class="divider"></div>
         <el-menu-item index="0">Unidades</el-menu-item>
         <el-menu-item index="1">Ensino</el-menu-item>
         <el-menu-item index="2">Contato</el-menu-item>
         <el-menu-item index="3">Federação</el-menu-item>
+        <el-menu-item index="4">Parceiros</el-menu-item>
     </el-menu>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
+import { useRouter } from 'vue-router'
 
+const router = useRouter()
 const activeIndex = ref('0')
-const handleSelect = (key, keyPath) => {
-  console.log(key, keyPath)
+const navItem = reactive([
+  'about', 'learn', 'units', 'federation', 'partners'
+])
+
+function navigateToHash (index) {
+  activeIndex.value = index
+  router.push({ path: '/', hash: `#${navItem[index]}` })
 }
+
 </script>
 
 <style lang="scss" scoped>
@@ -41,6 +50,7 @@ const handleSelect = (key, keyPath) => {
     .logo {
         margin: 4px 8px;
         height: 50px;
+        cursor: pointer;
     }
 
     .divider {
