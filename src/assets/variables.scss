@@ -1,0 +1,29 @@
+$space: 8px;
+$space2x: 16px;
+$space3x: 24px;
+$space4x: 32px;
+$space5x: 48px;
+
+h1, h2, h3, h4, h5 {
+    margin: $space;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 16px;
+}
+
+h5 {
+    font-size: 8px;
+}

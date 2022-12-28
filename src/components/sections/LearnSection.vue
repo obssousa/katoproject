@@ -1,6 +1,6 @@
 <template>
     <el-row class="row" justify="center">
-        <h1 class="title"> Conheça os senseis do projeto Kato </h1>
+        <h2 class="title"> Conheça os senseis do projeto Kato </h2>
         <h4 class="subtitle"> O projeto Kato conta com uma equipe dedicada por trás do ensino. </h4>
         <el-carousel class="card" :interval="10000" type="card" height="500px">
             <el-carousel-item v-for="(sensei, index) in senseis" :key="index">
@@ -22,6 +22,8 @@ import SenseiCard from '@/components//SenseiCard.vue'
 </script>
 
 <style lang="scss" scoped>
+@use '../../assets/variables.scss';
+
 .row {
     display: flex;
     flex-direction: column;
@@ -33,7 +35,6 @@ import SenseiCard from '@/components//SenseiCard.vue'
     flex-wrap: nowrap;
 
     .title {
-        font-size: 32px;
         margin: 10px;
     }
 
