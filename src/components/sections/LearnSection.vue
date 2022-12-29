@@ -2,7 +2,7 @@
     <el-row class="row" justify="center">
         <h2 class="title"> Conheça os senseis do Dojo Kato </h2>
         <h4 class="subtitle"> O Dojo Kato conta com uma equipe dedicada por trás do ensino. </h4>
-        <el-carousel arrow="never" loop class="card" :interval="500000" :height="isMobile? '200px' : '300px'">
+        <el-carousel arrow="never" loop class="card" :interval="5000" :height="isMobile? '200px' : '300px'">
             <el-carousel-item v-for="(sensei, index) in senseis" :key="index">
                 <SenseiCard
                     :name="sensei.name"

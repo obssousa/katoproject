@@ -1,6 +1,6 @@
 <template>
     <el-row class="row" justify="center">
-        <h1 class="title"> Conheça os parceiros do Projeto Kato </h1>
+        <h1 class="title"> Conheça os parceiros do Dojo Kato </h1>
         <el-carousel class="card" :interval="4000" type="card" height="200px">
             <el-carousel-item v-for="item in 6" :key="item">
             <h3 text="2xl" justify="center">{{ item }}</h3>

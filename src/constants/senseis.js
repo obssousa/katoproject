@@ -1,4 +1,4 @@
-import andreia from '@/assets/andreia.jpg'
+// import andreia from '@/assets/andreia.jpg'
 import helena from '@/assets/helena.jpg'
 import gilson from '@/assets/gilson.jpg'
 import sensei from '@/assets/sensei.jpg'
@@ -8,26 +8,26 @@ const senseis = [
     name: 'Geordano Valente Raad',
     graduation: '4º Dan',
     img: sensei,
-    about: 'Fundador do Dojo Kato'
+    about: 'Diretor Geral'
   },
   {
-    name: 'Gilson do Mau',
+    name: 'Gilson Mendes Leandro',
     graduation: '2º Dan',
     img: gilson,
-    about: 'Discipulo do Mestre'
+    about: 'Diretor Técnico'
   },
   {
-    name: 'Helena Gabriela',
+    name: 'Helena Gabriela Melo',
     graduation: '1º Dan',
     img: helena,
     about: 'Professora Assistente'
-  },
-  {
-    name: 'Andreia Cristina da Silva',
-    graduation: '1º Dan',
-    img: andreia,
-    about: 'Assistente'
   }
+  // {
+  //   name: 'Andreia Quitanias',
+  //   graduation: '1º Dan',
+  //   img: andreia,
+  //   about: 'Assistente'
+  // }
 ]
 
 export { senseis }

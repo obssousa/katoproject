@@ -7,7 +7,7 @@
         <span class="about"> {{ about }} </span>
       </div>
     </div>
-  </template>
+</template>
 
 <script setup>
 import useDevice from '@/hooks/useDevice'
