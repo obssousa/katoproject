@@ -7,7 +7,13 @@
                 v-for="(unit, index) in units"
                 :key="index"
                 :title="unit.title"
+                :unit="unit.unit"
                 :img="unit.img"
+                :whatsapp="unit.whatsapp"
+                :number="unit.number"
+                :instagram="unit.instagram"
+                :instagram-nick="unit.instagramNick"
+                :logo="unit.logo"
                 :address="unit.address"
                 :postalCode="unit.postalCode"
                 :mapLink="unit.mapLink"
@@ -25,7 +31,7 @@ import { units } from '@/constants/units'
 @import '../../assets/variables.scss';
 
 .row {
-    padding: 20px 0;
+    padding: 40px $space3x;
     background-image: linear-gradient(to left, var(--el-color-white), var(--el-fill-color-darker));
     display: flex;
     flex-direction: column;

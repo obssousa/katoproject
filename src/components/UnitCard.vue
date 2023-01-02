@@ -1,65 +1,170 @@
 <template>
-    <el-card :body-style="{ padding: '0px' }" class="cardParent" shadow="hover">
-      <img class="image" :src="img" />
-      <div class="bottom">
-        <component class="title" :is="isMobile ? 'h4' : 'h2'">{{ title }}</component>
-        <component class="address" :is="isMobile ? 'h5' : 'h4'">{{ address }}</component>
-        <!-- <span class="about"> {{ about }} </span> -->
+    <div class="cardParent" >
+      <div class="flipper">
+        <el-card class="redContent" shadow="hover">
+          <component class="title" :is="isMobile ? 'h3' : 'h2'">{{ unit }}</component>
+        </el-card>
+        <el-card class="hoverContent" shadow="hover">
+          <div class="info">
+            <img class="logo" :src="logo" />
+            <div class="bottom">
+              <component class="title" :is="isMobile ? 'h4' : 'h3'">{{ title }}</component>
+              <component @click="redirectAdress(mapLink)" class="address" :is="isMobile ? 'h5' : 'h5'">{{ address }}</component>
+            </div>
+          </div>
+          <div class="contact">
+            <a :href="whatsapp" target="_blank">
+              <img class="icon" src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" />
+              <span>{{ number }}</span>
+            </a>
+            <a :href="instagram" target="_blank">
+              <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png" />
+              <span>{{ instagramNick }}</span>
+            </a>
+          </div>
+        </el-card>
       </div>
-    </el-card>
+    </div>
   </template>
 
-<script lang="ts" setup>
+<script setup>
 import useDevice from '@/hooks/useDevice'
 
 const { isMobile } = useDevice()
 
 defineProps({
   title: String,
+  unit: String,
   img: String,
   logo: String,
+  whatsapp: String,
+  instagram: String,
+  instagramNick: String,
   address: String,
   postalCode: String,
-  mapLink: String
+  mapLink: String,
+  number: String
 })
+
+function redirectAdress (link) {
+  window.open(link, '_blank')
+}
 
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/variables.scss';
 
-.cardParent {
-    border-radius: 20px;
-    width: 360px;
-    background-image: linear-gradient(to left, var(--el-color-primary), #ff604d);
-    color: var(--el-color-white);
+@font-face {
+    font-family: 'Karate';
+    src: url('../assets/Karate.ttf');
 }
 
-  .bottom {
-    margin: 12px 20px;
-    color: var(--el-color-white);
+.cardParent {
+  border-radius: 20px;
+  min-width: 400px;
+  height: 150px;
+  perspective: 1000px;
+
+  .flipper {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-
-    .title {
-      margin: 0px;
-    }
-
-    .address {
-      margin: 8px 0 0;
-    }
-
-    .about {
-      margin: 16px 0 0;
-    }
-  }
-
-  .image {
     width: 100%;
-    height: 300px;
-    display: block;
-    object-fit: cover;
+    height: 100%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+    .redContent, .hoverContent {
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+
+    .redContent {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      align-items: center;
+      background-image: linear-gradient(to left, var(--el-color-primary), var(--el-color-primary-light-3));
+      color: var(--el-color-white);
+      font-family: 'Karate', sans-serif;
+
+      .title {
+        text-transform: uppercase;
+      }
+    }
+
+    .hoverContent {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      justify-content: flex-start;
+      transform: rotateY(180deg);
+      background-image: linear-gradient(to right, #fafafa, #ffffff);
+
+      .info {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+
+        .logo {
+          height: 64px;
+          width: 64px;
+          // border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .bottom {
+          margin: $space $space2x;
+          color: black;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+
+          .title {
+            margin: 0px;
+          }
+
+          .address {
+            margin: $space 0 0;
+            cursor: pointer;
+          }
+
+          .about {
+            margin: $space2x 0 0;
+          }
+        }
+      }
+
+      .contact {
+        display: flex;
+        flex-direction: row;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: unset;
+          color: black;
+          margin: $space $space4x $space 0;
+
+          .icon {
+            margin-right: $space;
+            width: 32px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
   }
-  </style>
+
+  &:hover {
+    .flipper{
+      transform: rotateY(-180deg);
+    }
+  }
+}
+</style>
