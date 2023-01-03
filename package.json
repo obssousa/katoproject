@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.0.10",
     "@fawmi/vue-google-maps": "0.9.67",
     "element-plus": "^2.2.27",
     "vue": "^3.2.45",

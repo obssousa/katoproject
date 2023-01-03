@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@element-plus/icons-vue': ^2.0.10
   '@fawmi/vue-google-maps': 0.9.67
   '@vitejs/plugin-vue': ^4.0.0
   element-plus: ^2.2.27
@@ -16,6 +17,7 @@ specifiers:
   vue-router: '4'
 
 dependencies:
+  '@element-plus/icons-vue': 2.0.10_vue@3.2.45
   '@fawmi/vue-google-maps': 0.9.67
   element-plus: 2.2.27_vue@3.2.45
   vue: 3.2.45
