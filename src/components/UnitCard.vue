@@ -17,7 +17,7 @@
               <img class="icon" src="https://cdn-icons-png.flaticon.com/512/4494/4494494.png" />
               <span>{{ number }}</span>
             </a>
-            <a :href="instagram" target="_blank">
+            <a :href="instagram" target="_blank" v-show="instagramNick.length > 0">
               <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png" />
               <span>{{ instagramNick }}</span>
             </a>
@@ -98,7 +98,6 @@ function redirectAdress (link) {
     .hoverContent {
       display: flex;
       flex-direction: row;
-      // align-items: center;
       justify-content: flex-start;
       transform: rotateY(180deg);
       background-image: linear-gradient(to right, #fafafa, #ffffff);
@@ -166,5 +165,12 @@ function redirectAdress (link) {
       transform: rotateY(-180deg);
     }
   }
+}
+
+@media (max-width: 550px) {
+    .cardParent {
+      margin: 0 $spaceMinimal;
+      min-width: 280px;
+    }
 }
 </style>

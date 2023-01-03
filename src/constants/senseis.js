@@ -6,19 +6,19 @@ import sensei from '@/assets/sensei.jpg'
 const senseis = [
   {
     name: 'Geordano Valente Raad',
-    graduation: '4º Dan',
+    graduation: '4º DAN',
     img: sensei,
     about: 'Diretor Geral'
   },
   {
     name: 'Gilson Mendes Leandro',
-    graduation: '2º Dan',
+    graduation: '2º DAN',
     img: gilson,
     about: 'Diretor Técnico'
   },
   {
     name: 'Helena Gabriela Melo',
-    graduation: '1º Dan',
+    graduation: '1º DAN',
     img: helena,
     about: 'Professora Assistente'
   }

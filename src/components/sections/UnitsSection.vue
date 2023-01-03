@@ -53,4 +53,14 @@ import { units } from '@/constants/units'
         gap: 16px;
     }
 }
+
+@media (max-width: 550px) {
+    .row {
+        padding: 30px $spaceMinimal;
+        .content {
+            width: -webkit-fill-available;
+            flex-direction: column;
+        }
+    }
+}
 </style>

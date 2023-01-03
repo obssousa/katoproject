@@ -1,19 +1,20 @@
 <template>
     <el-row class="row" justify="center">
-        <h2 class="title"> Conheça os parceiros do Dojo Kato </h2>
+        <h2 class="title"> Somos associados a federações </h2>
         <div class="content">
             <PartnerCard
-                v-for="(partner, index) in partners"
+                v-for="(federation, index) in federations"
                 :key="index"
-                :title="partner.title"
-                :logo="partner.logo"
+                :title="federation.title"
+                :logo="federation.logo"
+                small-text
             />
         </div>
     </el-row>
 </template>
 
 <script setup>
-import { partners } from '@/constants/partners'
+import { federations } from '@/constants/federations'
 import PartnerCard from '@/components/PartnerCard.vue'
 
 </script>
