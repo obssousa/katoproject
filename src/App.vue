@@ -14,6 +14,10 @@ import NavBar from '@/components/NavBar.vue'
 
 <style lang="scss" scoped>
 
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]  {
+  display: none;
+}
+
 .main {
   padding: 0px;
 }
