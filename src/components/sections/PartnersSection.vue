@@ -25,7 +25,7 @@ import PartnerCard from '@/components/PartnerCard.vue'
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px $space3x;
+    padding: 0px $space3x 40px;
     background-image: linear-gradient(to left, var(--el-color-primary), var(--el-color-primary-light-3));
     color: var(--el-color-white);
 
