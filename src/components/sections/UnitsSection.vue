@@ -51,6 +51,8 @@ import { units } from '@/constants/units'
         display: flex;
         flex-direction: row;
         gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
