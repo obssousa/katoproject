@@ -38,7 +38,7 @@
                         title="Terceiro mandamento"
                         :width="200"
                         trigger="hover"
-                        content="Desenvolver a persistência e o esforço."
+                        content="Criar o intuito de esforço."
                     >
                         <template #reference>
                             <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
@@ -68,7 +68,7 @@
                         title="Quinto mandamento"
                         :width="200"
                         trigger="hover"
-                        content="Conter o espírito de agressão destrutiva."
+                        content="Conter o espírito de agressão."
                     >
                         <template #reference>
                             <component class="kanjin" :is="isMobile ? 'h5' : 'h3'">
