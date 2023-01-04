@@ -54,6 +54,7 @@ const navItem = reactive([
 ])
 
 function navigateToHash (index) {
+  console.log(index)
   activeIndex.value = index
   router.push({ path: '/', hash: `#${navItem[index]}` })
 

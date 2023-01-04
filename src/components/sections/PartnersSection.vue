@@ -1,6 +1,6 @@
 <template>
     <el-row class="row" justify="center">
-        <h2 class="title"> Conheça os parceiros do Dojo Kato </h2>
+        <h2 class="title"> Parceiros do Dojo Kato </h2>
         <div class="content">
             <PartnerCard
                 v-for="(partner, index) in partners"
@@ -26,7 +26,7 @@ import PartnerCard from '@/components/PartnerCard.vue'
     flex-direction: column;
     align-items: center;
     padding: 0px $space3x 40px;
-    background-image: linear-gradient(to left, var(--el-color-primary), var(--el-color-primary-light-3));
+    background-image: linear-gradient(to left, #212121, #424242);
     color: var(--el-color-white);
 
     .content {

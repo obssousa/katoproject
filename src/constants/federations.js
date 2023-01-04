@@ -1,4 +1,5 @@
 import fktep from '@/assets/fktep.jpg'
+import cbkt from '@/assets/cbkt.png'
 
 const federations = [
   {
@@ -7,7 +8,7 @@ const federations = [
   },
   {
     title: 'Confederação Brasileiro De Karatê-Do Tradicional',
-    logo: 'http://www.fpktradicional.com.br/home/images/stories/imagens/LOGO%20CBKT.png'
+    logo: cbkt
   }
 ]
 

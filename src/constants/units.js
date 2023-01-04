@@ -4,7 +4,7 @@ import kato from '@/assets/kato.jpg'
 const units = [
   {
     title: 'Dojo Kato',
-    unit: 'Mangueirão',
+    unit: 'Mangueirao',
     img: kato,
     logo: 'https://pbs.twimg.com/profile_images/494123820920217601/XKodJgCi_400x400.png',
     address: 'Av. Augusto Montenegro, 141 - Parque Verde',
@@ -30,7 +30,7 @@ const units = [
   },
   {
     title: 'Cond. Summer Total',
-    unit: 'Tenoné',
+    unit: 'Tenone',
     img: levelOne,
     logo: 'https://www.viver.com.br/commom/images/realties/files/60/logo.png',
     address: 'Av. Augusto Montenegro, 3975 - Tenoné',

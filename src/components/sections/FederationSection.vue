@@ -1,6 +1,6 @@
 <template>
     <el-row class="row" justify="center">
-        <h2 class="title"> Somos associados a federações </h2>
+        <h2 class="title"> Federação e Confederação </h2>
         <div class="content">
             <PartnerCard
                 v-for="(federation, index) in federations"
@@ -27,7 +27,7 @@ import PartnerCard from '@/components/PartnerCard.vue'
     flex-direction: column;
     align-items: center;
     padding: 40px $space3x;
-    background-image: linear-gradient(to left, var(--el-color-primary), var(--el-color-primary-light-3));
+    background-image: linear-gradient(to left, #212121, #424242);
     color: var(--el-color-white);
 
     .content {
