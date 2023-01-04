@@ -12,7 +12,7 @@ const partners = [
     logo: paracuia
   },
   {
-    title: 'Domei',
+    title: 'Doumei',
     logo: domei
   }
 ]

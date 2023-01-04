@@ -39,7 +39,7 @@ import PartnerCard from '@/components/PartnerCard.vue'
 
 @media (max-width: 550px) {
     .row {
-        padding: 30px $space;
+        padding: 0px $space $space3x;
         .content {
             display: flex;
             flex-direction: column;

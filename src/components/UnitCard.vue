@@ -18,7 +18,7 @@
               <span>{{ number }}</span>
             </a>
             <a :href="instagram" target="_blank" v-show="instagramNick.length > 0">
-              <img class="icon" src="https://cdn-icons-png.flaticon.com/512/174/174855.png" />
+              <img class="icon" src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" />
               <span>{{ instagramNick }}</span>
             </a>
           </div>
@@ -171,6 +171,17 @@ function redirectAdress (link) {
     .cardParent {
       margin: 0 $spaceMinimal;
       min-width: 280px;
+
+      .flipper {
+        .hoverContent {
+          .contact {
+            > a {
+              font-size: 12px;
+              margin: $space $spaceMinimal;
+            }
+          }
+        }
+      }
     }
 }
 </style>

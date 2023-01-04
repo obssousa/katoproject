@@ -99,9 +99,12 @@ const { isMobile } = useDevice()
 .drawer {
     display: flex;
     flex-direction: column;
+    height: -webkit-fill-available;
+    align-items: center;
+    justify-content: space-around;
 
     .button {
-        height: 35px;
+        height: 100%;
         margin: 0;
     }
 }

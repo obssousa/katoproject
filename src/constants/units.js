@@ -1,11 +1,8 @@
-import levelOne from '@/assets/levelone.jpg'
-import kato from '@/assets/kato.jpg'
 
 const units = [
   {
     title: 'Dojo Kato',
     unit: 'Mangueirao',
-    img: kato,
     logo: 'https://pbs.twimg.com/profile_images/494123820920217601/XKodJgCi_400x400.png',
     address: 'Av. Augusto Montenegro, 141 - Parque Verde',
     postalCode: '66666-000',
@@ -18,7 +15,6 @@ const units = [
   {
     title: 'Level One',
     unit: 'Doca',
-    img: levelOne,
     logo: 'https://dnd1g0gk41u1l.cloudfront.net/image/filename/4422759/logo_mVcfH_TL_93TO6TwB3dq9ZAcCVTS3K9A.jpeg',
     address: 'Rua Municipalidade, 569 - Reduto',
     postalCode: '66640-300',
@@ -31,7 +27,6 @@ const units = [
   {
     title: 'Cond. Summer Total',
     unit: 'Tenone',
-    img: levelOne,
     logo: 'https://www.viver.com.br/commom/images/realties/files/60/logo.png',
     address: 'Av. Augusto Montenegro, 3975 - Tenoné',
     postalCode: '66640-300',
